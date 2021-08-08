@@ -15,6 +15,11 @@ def queue_tasks():
     queue.enqueue(tasks.print_task, 5)
     queue.enqueue_in(timedelta(seconds=10), tasks.print_numbers, 5)
 
+
+def main():
+    queue_tasks()
+
+
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    pass
+    main()
