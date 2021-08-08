@@ -1,14 +1,22 @@
 ############------------ IMPORTS ------------############
 from datetime import datetime, timedelta
 import time
+import random
+
 
 ############------------ FUNCTION(S) ------------############
 def print_task(seconds):
     print("Starting task")
 
-    for second in range(seconds):
-        print(second, ". Hello World!")
-        time.sleep(1)
+    # random_num = random.randrange(1, 3, 1)
+    random_num = 2
+    
+    if random_num == 2:
+        raise RuntimeError('Sorry, I failed! Let me try again.')
+    else:
+        for second in range(seconds):
+            print(second + 1, ". Hello World!")
+            time.sleep(1)
 
     print("Task completed")
 
@@ -17,7 +25,7 @@ def print_numbers(seconds):
     print("Starting num task")
 
     for second in range(seconds):
-        print(second)
+        print(second + 1)
         time.sleep(1)
 
     print("Task to print_numbers completed")

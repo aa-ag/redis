@@ -11,4 +11,11 @@ Starting with _How to Run Your First Task with RQ, Redis, and Python_ from [Twil
 - `conda activate redis`
 - `brew install redis`
 - `conda install -c conda-forge rq`
-- `redis-server`
+
+### RUN
+
+3 tabs are needed: 
+
+1. `redis-server`
+2. `rq worker --with-scheduler`
+3. `python app.py`
