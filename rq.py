@@ -14,7 +14,14 @@ def print_task(seconds):
 
 
 def print_numbers(seconds):
-    pass
+    print("Starting num task")
+
+    for second in range(seconds):
+        print(second)
+        time.sleep(1)
+
+    print("Task to print_numbers completed")
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
