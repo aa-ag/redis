@@ -9,13 +9,20 @@ def print_task(seconds):
     print("Starting task")
 
     # random_num = random.randrange(1, 3, 1)
-    random_num = 2
+    # random_num = 2
     
-    if random_num == 2:
-        raise RuntimeError('Sorry, I failed! Let me try again.')
-    else:
-        for second in range(seconds):
-            print(second + 1, ". Hello World!")
+    # if random_num == 2:
+    #     raise RuntimeError('Sorry, I failed! Let me try again.')
+    # else:
+    #     for second in range(seconds):
+    #         print(second + 1, ". Hello World!")
+    #         time.sleep(1)
+
+    for second in range(seconds):
+            now = datetime.now()
+
+            current_time = now.strftime("%H:%M:%S")
+            print("Current Time is", current_time)
             time.sleep(1)
 
     print("Task completed")
