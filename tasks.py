@@ -2,42 +2,36 @@
 from datetime import datetime, timedelta
 import time
 import random
+import pytz
 
 
 ############------------ FUNCTION(S) ------------############
-def print_task(seconds):
-    print("Starting task")
-
-    # random_num = random.randrange(1, 3, 1)
-    # random_num = 2
-    
-    # if random_num == 2:
-    #     raise RuntimeError('Sorry, I failed! Let me try again.')
-    # else:
-    #     for second in range(seconds):
-    #         print(second + 1, ". Hello World!")
-    #         time.sleep(1)
+def print_newyorkcity_time(seconds):
+    print("Starting print_newyorkcity_time task")
 
     for second in range(seconds):
-            now = datetime.now()
+            tz_nyc = pytz.timezone('America/New_York') 
+            datetime_nyc = datetime.now(tz_nyc)
+            print("NY time:", datetime_nyc.strftime("%H:%M:%S"))
 
-            current_time = now.strftime("%H:%M:%S")
-            print("Current Time is", current_time)
             time.sleep(1)
 
-    print("Task completed")
+    print("Task print_newyorkcity_time completed")
 
 
-def print_numbers(seconds):
-    print("Starting num task")
+def print_london_time(seconds):
+    print("Starting print_london_time task")
 
     for second in range(seconds):
-        print(second + 1)
-        time.sleep(1)
+        tz_London = pytz.timezone('Europe/London')
+        datetime_London = datetime.now(tz_London)
+        print("London time:", datetime_London.strftime("%H:%M:%S"))
 
-    print("Task to print_numbers completed")
+    print("Task to print_london_time completed")
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    print_task()
+    print_newyorkcity_time()
+
+    print_london_time()
