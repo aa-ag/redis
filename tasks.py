@@ -12,7 +12,7 @@ def print_newyorkcity_time(seconds):
     for second in range(seconds):
             tz_nyc = pytz.timezone('America/New_York') 
             datetime_nyc = datetime.now(tz_nyc)
-            print("NY time:", datetime_nyc.strftime("%H:%M:%S"))
+            print("NYC time:", datetime_nyc.strftime("%H:%M:%S"))
 
             time.sleep(1)
 

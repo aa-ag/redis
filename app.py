@@ -13,8 +13,13 @@ queue = Queue(connection=Redis())
 
 ############------------ FUNCTION(S) ------------############
 def queue_tasks():
-    queue.enqueue(tasks.print_newyorkcity_time, 5, retry=Retry(max=2))
-    queue.enqueue_in(timedelta(seconds=5), tasks.print_london_time, 5)
+    loops = 0
+    
+    while loops < 3:
+        queue.enqueue(tasks.print_newyorkcity_time, 5, retry=Retry(max=2))
+        queue.enqueue_in(timedelta(seconds=5), tasks.print_london_time, 5)
+
+        loops += 1
     
 
 
