@@ -11,6 +11,7 @@ Starting with _How to Run Your First Task with RQ, Redis, and Python_ from [Twil
 - `conda activate redis`
 - `brew install redis`
 - `conda install -c conda-forge rq`
+- `conda install -c anaconda pytz`
 
 ### RUN
 
